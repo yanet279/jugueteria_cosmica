@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* Esta diciendo que todos los elementos de la pantalla lo hereden*/
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box; /* Todos los elemento de la pagina heredan de body; o sea el h1, p, b y strong van a heredar el box-sizing de body*/
+    background-color: #f4f4f4;
+
+}

@@ -1,0 +1,65 @@
+.main-form {
+    max-width: 60rem;
+    margin: 80px auto;
+
+    &__container {
+        background-color: #84a5f047;
+        border-radius: 15px;
+        padding: 40px 0 65px ;
+        margin: 20px auto;
+        width: 80%;
+        border: 1px solid #283f76;
+        box-shadow: 8px 9px 18px 1px #161e3345;
+
+        & legend {
+            border-radius: 15px;
+            // position: relative;
+            // bottom: 25px;
+            margin: 0 0;
+            font-size: 30px;
+            height: 60px;
+            background-color: #283f76;
+            width: 90%;
+            text-align: center;
+            color: #f4f4f4;
+            text-transform: uppercase;
+            font-weight: 800;
+            padding: 1rem;
+        }
+    }
+
+    &__countryside {
+
+        & label {
+            margin: 10px 0;
+            text-align: center;
+            display: block;
+            // flex-basis: 10rem;
+        }
+
+        & input {
+            padding: 0 15px ;
+            border-radius: 15px;
+            height: 35px;
+            border: 1px solid #283f76;
+        }
+
+        & textarea {
+            border-radius: 15px;
+            resize: vertical;
+            height: 150px;
+            margin-bottom: 35px;
+        }
+
+        & input:not([type="radio"]),
+        & textarea,
+        & select {
+            display: flex;
+            margin: 0 auto;
+            width: 80%;
+            flex: 1;
+            border: 1px solid #e1e1e1;
+            // padding: 2rem;
+        }
+    }
+}

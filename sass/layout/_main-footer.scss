@@ -1,0 +1,60 @@
+.main-footer {
+    color: #f4f4f4;
+    border-top: 3px solid #86afcb;
+    margin-top: 3rem;
+    padding: 2rem 0 .02rem;
+    background-color: #d81d13;
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        
+        &-card {
+            flex: 1;
+            color: #f4f4f4;
+            text-align: center;
+            
+            & h3,
+            nav {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            & a {
+                color: #f4f4f4;
+                padding: 5px 0;
+                text-decoration: underline;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            flex-direction: row;
+            padding: 30px 0;
+        }
+    }
+    
+    &__icons {
+        margin: 0 50px;
+        border-bottom: #f4f4f46d solid .5px;
+        text-align: center;
+        
+        & i {
+            padding: 0 10px 30px;
+        }
+    }
+    
+    &__copyright {
+        margin-top: 2rem;
+        font-weight: 400;
+        color: #221f1f;
+        text-align: center;
+        font-size: 12px;
+        height: 3em;
+        background-color: #fffc33f4;
+        padding: 12px;
+    }
+
+}

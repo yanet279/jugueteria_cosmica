@@ -1,0 +1,25 @@
+.section-cards {
+    
+    &__header {
+        margin-left: 45px;
+    }
+
+    & .cards-container {
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+        
+        @media (min-width: 360px) {
+            width: 100%;
+            padding: 12px;
+        }
+    
+        @media (min-width: 1024px) {
+            width: 1600px;
+            max-width: 1600px;
+            margin: auto;
+        }
+    }
+}

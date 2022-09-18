@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/812ac387af.js" crossorigin="anonymous"></script>    
+    <title>contacto</title>
+</head>
+<body>
+    
+    <div></div>
+
+    <input type="checkbox" id="main-nav-toggle" class="main-nav-toggle">
+    <header class="main-header">
+        <div class="main-header__logo-container">
+        </div>
+        <div class="main-header__search-form-container">
+            <input type="text" id="search" name="search" autocomplete="off" placeholder="Buscar productos ..." disabled>
+            <label for="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+        </div>
+        <div class="main-header__cart-button-container">
+            
+        </div>
+        <div class="main-header__hamburger-button-container">
+            <label class="hamburger-button" for="main-nav-toggle" title="Expandir barra de navegación">
+                <span class="hamburger-button__top-bread"></span>
+                <span class="hamburger-button__meat"></span>
+                <span class="hamburger-button__botton-bread"></span>
+            </label>
+        </div>
+        <div class="main-header__main-nav-container">
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item" >
+                        <a class="main-nav__link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="alta.html">Alta</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <span class="main-nav__indicator"></span>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <form class="main-form">
+            <fieldset class="main-form__container">
+                <legend>Tus Datos</legend>
+                <div class="main-form__countryside">
+                    <label for="name">Nombre: </label>
+                    <input  id="name" type="text" placeholder="Tu Nombre" required>
+                </div>
+                <div class="main-form__countryside">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="email" placeholder="Tu Email" >
+                </div>
+                <div class="main-form__countryside">
+                    <label for="tel">Mensaje:</label>
+                    <textarea rows="10" cols="20"></textarea>
+                </div>
+            </fieldset>
+
+            <input class="btn" type="submit" value="Enviar Formulario" >
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <div class="main-footer__icons">
+            <i class="fa-brands fa-whatsapp fa-2xl"></i>
+            <i class="fa-brands fa-facebook fa-2xl"></i>
+            <i class="fa-brands fa-instagram fa-2xl"></i>
+        </div>
+        <div class="main-footer__menu">
+            <div class="main-footer__menu-card">
+                <h3>titulo nav footer</h3>
+                <nav>
+                    <a href="#">enlace interno</a>
+                    <a href="#">enlace interno</a>
+                    <a href="#">enlace interno</a>
+                </nav>
+            </div>
+            <div class="main-footer__menu-card">
+                <h3>titulo nav footer</h3>
+                <nav>
+                    <a href="#">enlace interno</a>
+                    <a href="#">enlace interno</a>
+                    <a href="#">enlace interno</a>
+                </nav>
+            </div>
+            <div class="main-footer__menu-card">
+                <h3>titulo nav footer</h3>
+                <nav>
+                    <a href="#">enlace interno</a>
+                    <a href="#">enlace interno</a>
+                    <a href="#">enlace interno</a>
+                </nav>
+            </div>
+        </div>
+        <p class="main-footer__copyright">Todos los derechos Reservados Jugueteria Cosmica</p>
+    </footer>
+    
+    <script src="js/main.js"></script>
+
+</body>
+</html>

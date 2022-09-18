@@ -1,0 +1,49 @@
+// vendors
+@use 'vendors/normalize';
+
+// base
+@use 'base/reset';
+@use 'base/utilities';
+
+// layout
+
+@use 'layout/section-cards';
+@use 'layout/main-header';
+@use 'layout/main-nav';
+@use 'layout/main-nav-toggle';
+@use 'layout/hamburger-button';
+@use 'layout/main-footer';
+
+// components
+@use 'components/card';
+@use 'components/carousel';
+
+// pages
+@use 'pages/contacto';
+@use 'pages/index';
+@use 'pages/alta';
+
+
+
+.cart-modal-container {
+    // display: flex;
+    position: absolute;
+    top: 15em;
+    left: 10em;
+    z-index: 1;
+    width: 70%;
+    height: 40%;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .4);
+    border: solid 1px rgb(152, 152, 152);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.877);
+    // flex-direction: row-reverse;
+
+    & > img {
+        padding: 5px;
+        float: right;
+        width: 40px;
+        height: 40px;
+    }
+}
+

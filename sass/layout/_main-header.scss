@@ -1,0 +1,179 @@
+
+.main-header {
+    background-color: #fa2222;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 2px;
+
+    // @media (min-width: 1326px) {
+    //     margin: 0 auto;
+    // }
+    
+
+    &__logo-container{
+        // background-image: url(../../img/iconos/LogoMakr-74R8Ui.png);
+        background-repeat: no-repeat;
+        background-size: 155px 65px;
+        display: flex;
+        height: 60px;
+        width: 100%;
+        padding: 1em;
+        flex-basis: 10em;
+
+
+        @media (min-width: 480px){
+            background-size: 175px 70px;
+            height: 81px;
+            flex-basis: 12em;
+        }
+        
+        @media (min-width: 768px){
+            height: 90px;
+            background-size: 195px 85px;
+            flex-basis: 12.9em;
+        }
+
+        @media (min-width: 1024px){
+            flex-basis: 13em;
+            margin-left: 15px;
+        }
+    }
+    
+    &__search-form-container {
+        padding: 1em 1em;
+        flex-grow: 0;
+        display: flex;
+        background-color: #d81d13;
+
+        width: 100%;
+        order: 1;
+        
+        & input {
+            background-color: #f4f4f4;
+            padding-left: 13px;
+            border-radius: 20px 0 0 20px; 
+            border: solid 3px #fa2222;
+            width: 100%;
+            height: 45px;
+            
+            // @media (min-width: 480px) {
+                //     width: 100%;
+                // }
+                
+            @media (min-width: 768px) {
+                border-top: 1px solid rgba(32, 32, 32, 0.096);
+                height: 48px;
+                border: solid 3px #d81d13;
+            }
+        }
+        
+        & label{
+            border-radius:0 20px 20px 0; 
+            padding-right: 5px;
+            background-color: #fa2222;
+            width: 60px;
+            color: #f4f4f4;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & i {
+                font-size: 30px;
+                // font-weight: 600;
+            }
+            
+            @media (min-width:768px) {
+                height: 48px;
+                background-color: #d81d13;
+            } 
+        }
+        
+        @media (min-width: 480px) {
+            width: 100%;
+        }
+        
+        @media (min-width: 768px){
+            // border: solid red 2px;
+            background-color: #fa2222;
+            width: 80%;
+            max-width: 900px;
+            order: 2;
+            flex-basis: 65%;
+            flex-grow: 0;
+            flex-shrink: 1;
+            padding-top: 1em;
+            margin-top: 5px;
+        }
+    }
+    
+    &__cart-button-container {
+        background-image: url('img/iconos/icons8-shopping-trolley-64.png');
+        background-repeat:no-repeat ;
+        background-position: center 18px;
+        background-size: 29px;
+        margin-left: auto;
+        width: 55px;
+        
+        cursor: pointer;
+        // padding: 0;
+        
+        @media (min-width: 768px){
+            background-position: left 30px;
+            display: flex;
+            order: 2;
+            max-width: 70px;
+        }
+
+        @media (min-width: 1024px) {
+            
+        }
+        
+        &--press {
+            background-color: #770a0e23;
+            display: flex;
+            background-position: center 11px;
+            margin-top: 8px;
+            margin-right: 3px;
+            padding-bottom: 15px;
+            width: 50px;
+            height: 48px;
+            border-radius: 50%;
+            box-shadow: 0 -5px 3px -3px rgba(51, 50, 50, 0.207) inset,
+                        1px -8px 8px -7px rgba(0, 0, 0, 0.158) inset;
+            
+            @media (min-width: 768px) {
+                // margin-top: 15px;
+                margin: auto;
+                background-position: center 11px;
+            }
+        }
+    }
+
+    &__hamburger-button-container {
+        padding: 17px 12px 1em 4px;
+
+        @media (min-width: 768px){
+            display: none;
+        }
+    }
+
+    &__main-nav-container {
+        flex-basis: 100%;
+        display: none;
+        flex-grow: 1;
+        top: 50px;
+        background-color: #d81d13;
+
+        
+        @media (min-width: 768px){
+            border-top: 1px solid rgba(32, 32, 32, 0.096);
+            // flex-basis: auto;
+            flex-grow: 1;
+            order: 3;
+            display: block;
+            height: 75px;
+        }
+    }
+}
+
