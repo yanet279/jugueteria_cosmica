@@ -1,3 +1,59 @@
+//? estilos carrito
+ul {
+    list-style: none;
+}
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+    position: absolute;
+    right:0;
+    top:100%;
+    z-index: 100;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+#vaciar-carrito{
+    display: block;
+    height: 38px;
+    padding: 0 30px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.borrar-articulo {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+//? estilos carrito
+
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
 
 .main-header {
     background-color: #fa2222;
@@ -5,7 +61,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     flex-basis: 2px;
-
+    z-index: 0;
     // @media (min-width: 1326px) {
     //     margin: 0 auto;
     // }
@@ -108,7 +164,7 @@
     }
     
     &__cart-button-container {
-        background-image: url('img/iconos/icons8-shopping-trolley-64.png');
+        // background-image: url('../../img/iconos/icons8-shopping-trolley-64.png');
         background-repeat:no-repeat ;
         background-position: center 18px;
         background-size: 29px;
@@ -123,6 +179,7 @@
             display: flex;
             order: 2;
             max-width: 70px;
+            margin:0 auto;
         }
 
         @media (min-width: 1024px) {

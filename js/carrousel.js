@@ -3,7 +3,7 @@ let sliderPoint = document.querySelectorAll('.carousel-articles__slider-point')
 
 
 sliderPoint.forEach((punto, i) => {
-    console.log(sliderPoint[i], 'num:'+ i)
+    // console.log(sliderPoint[i], 'num:'+ i)
     sliderPoint[i].addEventListener('click', () => {
         let positions = i;
         let operation = positions * -50;

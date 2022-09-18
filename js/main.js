@@ -1,40 +1,35 @@
-let cartButtonContainer = document.querySelector('.main-header__cart-button-container')
-let inputCreated = false
-let cartModalContainer = document.querySelectorAll('div')[0]
-let container = document.querySelector('.sections-carousel')
-let hamburgerContainer = document.querySelector('.main-header__hamburger-button-container')
-let navContainer = document.querySelector('.main.nav')
+let cartButtonContainer = document.querySelector('.main-header__cart-button-container');
+let inputCreated = false;
+let cartModalContainer = document.querySelectorAll('div')[0];
+let container = document.querySelector('.sections-carousel');
+let hamburgerContainer = document.querySelector('.main-header__hamburger-button-container');
+let navContainer = document.querySelector('.main.nav');
 
-let closeNotVisible = () => cartModalContainer.innerHTML = ''
+let flag;
+
+// let closeNotVisible = () => cartModalContainer.innerHTML = ''
 
 cartButtonContainer.addEventListener('click', e => {
-    const modal = cartModalContainer.classList.toggle('cart-modal-container')
-    if(modal) {
-        const imageHtml = `<img src="/img/iconos/Windows_Close_Program_22531.png" alt="close">`
-        cartModalContainer.innerHTML = imageHtml
-        cartModalContainer.addEventListener('click', e => {
-            if (e.target.tagName === 'IMG') {
-                cartModalContainer.classList.remove('cart-modal-container')
-                cartButtonContainer.classList.remove('main-header__cart-button-container--press')
-                closeNotVisible()
-            }
-        })
-    }else {
-        closeNotVisible()
+    const botonCarrito = e.target.parentElement;
+    
+    if(flag==0){
+        botonCarrito.querySelector('#carrito').style.display="block";
+        flag=1;
+    }else{
+        botonCarrito.querySelector('#carrito').style.display="none";
+        flag=0;
     }
-    e.target.classList.toggle('main-header__cart-button-container--press')
+    
 })
 
 document.addEventListener('keydown', e => {
     console.log(e.key)
+    const boton = document.querySelector('#carrito');
     if(e.key === 'Escape'){
-        closeNotVisible()
-        console.log('Cerrar modal.')
-        cartModalContainer.classList.remove('cart-modal-container')
-        cartButtonContainer.classList.remove('main-header__cart-button-container--press')
+        boton.style.display="none";
+        flag=0;
     }
 })
-
 
 hamburgerContainer.addEventListener('click', e => {
     const topBread = document.querySelector('.hamburger-button__top-bread') 
