@@ -353,9 +353,8 @@ body {
 }
 @media (min-width: 1024px) {
   .section-cards .cards-container {
-    width: 1600px;
     max-width: 1600px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
@@ -425,10 +424,12 @@ ul {
   z-index: 0;
 }
 .main-header__logo-container {
+  background-image: url(../../img/iconos/LogoMakr-74R8Ui.png);
   background-repeat: no-repeat;
-  background-size: 155px 65px;
+  background-size: 150px 55px;
+  background-position: 5px;
   display: flex;
-  height: 60px;
+  height: 65px;
   width: 100%;
   padding: 1em;
   flex-basis: 10em;
@@ -450,7 +451,14 @@ ul {
 @media (min-width: 1024px) {
   .main-header__logo-container {
     flex-basis: 13em;
-    margin-left: 15px;
+    margin-left: 1em;
+  }
+}
+@media (min-width: 1600px) {
+  .main-header__logo-container {
+    flex-basis: 13em;
+    margin-left: 5%;
+    width: 1000px;
   }
 }
 .main-header__search-form-container {
@@ -499,6 +507,7 @@ ul {
 @media (min-width: 480px) {
   .main-header__search-form-container {
     width: 100%;
+    margin: auto;
   }
 }
 @media (min-width: 768px) {
@@ -515,6 +524,7 @@ ul {
   }
 }
 .main-header__cart-button-container {
+  background-image: url("../../img/iconos/icons8-shopping-trolley-64.png");
   background-repeat: no-repeat;
   background-position: center 18px;
   background-size: 29px;
@@ -573,6 +583,11 @@ ul {
     height: 75px;
   }
 }
+@media (min-width: 1024px) {
+  .main-header {
+    margin: 0 auto;
+  }
+}
 
 .main-nav__list {
   margin: 0;
@@ -593,6 +608,13 @@ ul {
     flex-direction: row;
     position: relative;
     background-color: transparent;
+  }
+}
+@media (min-width: 1024px) {
+  .main-nav__list {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }
 .main-nav__item {
