@@ -451,29 +451,26 @@ ul {
 }
 @media (min-width: 480px) {
   .main-header__logo-container {
-    background-size: 175px 70px;
+    background-size: 150px 60px;
     height: 81px;
-    flex-basis: 12em;
+    flex-basis: 11em;
   }
 }
 @media (min-width: 768px) {
   .main-header__logo-container {
     height: 90px;
-    background-size: 195px 85px;
-    flex-basis: 12.9em;
+    background-size: 210px 80px;
+    flex-basis: 13.5em;
   }
 }
 @media (min-width: 1024px) {
   .main-header__logo-container {
-    flex-basis: 13em;
     margin-left: 1em;
   }
 }
 @media (min-width: 1600px) {
   .main-header__logo-container {
-    flex-basis: 13em;
-    margin-left: 5%;
-    width: 1000px;
+    margin-left: 1%;
   }
 }
 .main-header__search-form-container {
@@ -531,7 +528,7 @@ ul {
     width: 80%;
     max-width: 900px;
     order: 2;
-    flex-basis: 65%;
+    flex-basis: 62%;
     flex-grow: 0;
     flex-shrink: 1;
     padding-top: 1em;
