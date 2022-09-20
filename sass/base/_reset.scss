@@ -11,5 +11,10 @@ body{
     font-family: 'Inter', sans-serif;
     box-sizing: border-box; /* Todos los elemento de la pagina heredan de body; o sea el h1, p, b y strong van a heredar el box-sizing de body*/
     background-color: #f4f4f4;
-
+}
+main {
+    @media (min-width: 1024px){
+        max-width: 1600px;
+        margin:0 auto;
+    }
 }

@@ -319,6 +319,13 @@ body {
   background-color: #f4f4f4;
 }
 
+@media (min-width: 1024px) {
+  main {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
 .u-text-left {
   text-align: left !important;
 }
@@ -417,11 +424,19 @@ ul {
 
 .main-header {
   background-color: #fa2222;
+}
+.main-header__container-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-basis: 2px;
   z-index: 0;
+}
+@media (min-width: 1024px) {
+  .main-header__container-top {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
 }
 .main-header__logo-container {
   background-image: url(../../img/iconos/LogoMakr-74R8Ui.png);
@@ -612,7 +627,6 @@ ul {
 }
 @media (min-width: 1024px) {
   .main-nav__list {
-    width: 100%;
     max-width: 1600px;
     margin: 0 auto;
   }
@@ -724,6 +738,12 @@ ul {
   padding: 2rem 0 0.02rem;
   background-color: #d81d13;
 }
+@media (min-width: 1024px) {
+  .main-footer__container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
 .main-footer__menu {
   display: flex;
   flex-direction: column;
@@ -735,21 +755,63 @@ ul {
   color: #f4f4f4;
   text-align: center;
 }
+.main-footer__menu-card h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .main-footer__menu-card h3,
 .main-footer__menu-card nav {
-  text-align: center;
   display: flex;
   flex-direction: column;
+}
+.main-footer__menu-card ul li {
+  padding: 5px 0;
 }
 .main-footer__menu-card a {
   color: #f4f4f4;
   padding: 5px 0;
-  text-decoration: underline;
+  text-decoration: none;
+  text-align: center;
+}
+.main-footer__menu-card:first-child h3 {
+  margin: auto;
+  width: 300px;
+}
+@media (min-width: 480px) {
+  .main-footer__menu-card:first-child {
+    min-width: 100%;
+    margin: auto;
+  }
+  .main-footer__menu-card:first-child ul {
+    margin: auto;
+  }
+}
+@media (min-width: 768px) {
+  .main-footer__menu-card:first-child {
+    min-width: 40%;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) {
+  .main-footer__menu-card {
+    text-align: left;
+  }
+  .main-footer__menu-card a {
+    text-align: left;
+  }
+}
+@media (min-width: 480px) {
+  .main-footer__menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1px;
+  }
 }
 @media (min-width: 768px) {
   .main-footer__menu {
-    flex-direction: row;
-    padding: 30px 0;
+    flex-wrap: nowrap;
+    align-items: center;
+    column-gap: 5%;
   }
 }
 .main-footer__icons {
@@ -970,7 +1032,7 @@ ul {
 
 .carousel-articles {
   width: 100%;
-  max-width: 120em;
+  max-width: 1600px;
   color: #393939;
   transition: all 0.4s ease;
   background-color: #ececec;

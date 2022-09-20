@@ -13,45 +13,47 @@
 
     <input type="checkbox" id="main-nav-toggle" class="main-nav-toggle">
     <header class="main-header">
-        <div class="main-header__logo-container">
-        </div>
-        <div class="main-header__search-form-container">
-            <input type="text" id="search" name="search" autocomplete="off" placeholder="Buscar productos ..." disabled>
-            <label for="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
-        </div>
-
-        <!--TODO CARRITO -->
-        <div class="main-header__cart-button-container">
-            <ul>
-                <li class="submenu">
-                    <!-- <img src="img/iconos/carrito-de-compras.png" alt="carrito" width="30" height="30"> -->
-                    <div id="carrito">                         
-                        <table id="lista-carrito" class="u-full-width">
-                            <thead>
-                                <tr>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Precio</th>
-                                    <th>Cantidad</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="main-header__hamburger-button-container">
-            <label class="hamburger-button" for="main-nav-toggle" title="Expandir barra de navegación">
-                <span class="hamburger-button__top-bread"></span>
-                <span class="hamburger-button__meat"></span>
-                <span class="hamburger-button__botton-bread"></span>
-            </label>
+        <div class="main-header__container-top">
+            <div class="main-header__logo-container">
+            </div>
+            <div class="main-header__search-form-container">
+                <input type="text" id="search" name="search" autocomplete="off" placeholder="Buscar productos ..." disabled>
+                <label for="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+            </div>
+    
+            <!--TODO CARRITO -->
+            <div class="main-header__cart-button-container">
+                <ul class="cart-button">
+                    <li class="submenu">
+                        <!-- <img src="img/iconos/carrito-de-compras.png" alt="carrito" width="30" height="30"> -->
+                        <div id="carrito">                         
+                            <table id="lista-carrito" class="u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="main-header__hamburger-button-container">
+                <label class="hamburger-button" for="main-nav-toggle" title="Expandir barra de navegación">
+                    <span class="hamburger-button__top-bread"></span>
+                    <span class="hamburger-button__meat"></span>
+                    <span class="hamburger-button__botton-bread"></span>
+                </label>
+            </div> 
         </div>
         <div class="main-header__main-nav-container">
             <nav class="main-nav">
@@ -464,46 +466,47 @@
     </main>
 
     <footer class="main-footer">
-
-        <div class="main-footer__icons">
-            <i class="fa-brands fa-whatsapp fa-2xl"></i>
-            <i class="fa-brands fa-facebook fa-2xl"></i>
-            <i class="fa-brands fa-instagram fa-2xl"></i>
+        <div class="main-footer__container">
+            <div class="main-footer__icons">
+                <i class="fa-brands fa-whatsapp fa-2xl"></i>
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+            </div>
+            <div class="main-footer__menu">
+                <div class="main-footer__menu-card">
+                    <h3>
+                        <img src="img/iconos/LogoMakr-74R8Ui.png" alt="">
+                    </h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">541155554444</a></li>
+                            <li><a href="#">+54 11 4962-5000</a></li>
+                            <li><a href="#">jugueteriacosmica@gmail.com.ar</a></li>
+                            <li><a href="#">Av. Corrientes 2027, CABA</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="main-footer__menu-card">
+                    <h3>Comprar</h3>
+                    <nav>
+                        <a href="#">Por edad</a>
+                        <a href="#">Por marca</a>
+                        <a href="#">Política de Cambios y Devoluciones</a>
+                        <a href="#">Botón de Arrepentimiento</a>
+                    </nav>
+                </div>
+                <div class="main-footer__menu-card">
+                    <h3>Ayuda</h3>
+                    <nav>
+                        <a href="#">Reclamos</a>
+                        <a href="#">Legales</a>
+                        <a href="#">Preguntas Frecuentes</a>
+                        <a href="#">Términos y condiciones</a>
+                    </nav>
+                </div>
+            </div>
+            <p class="main-footer__copyright">Copyright 2022 © Juguetería Cósmica. Todos los derechos Reservados.</p>
         </div>
-        <div class="main-footer__menu">
-            <div class="main-footer__menu-card">
-                <h3>
-                    <img src="img/iconos/LogoMakr-74R8Ui.png" alt="">
-                </h3>
-                <nav>
-                    <ul>
-                        <li><a href="#">541155554444</a></li>
-                        <li><a href="#">+54 11 4962-5000</a></li>
-                        <li><a href="#">ventas_jugueteriacosmica@gmail.com.ar</a></li>
-                        <li><a href="#">Av. Corrientes 2027, CABA</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="main-footer__menu-card">
-                <h3>Comprar</h3>
-                <nav>
-                    <a href="#">Por edad</a>
-                    <a href="#">Por marca</a>
-                    <a href="#">Política de Cambios y Devoluciones</a>
-                    <a href="#">Botón de Arrepentimiento</a>
-                </nav>
-            </div>
-            <div class="main-footer__menu-card">
-                <h3>Ayuda</h3>
-                <nav>
-                    <a href="#">Reclamos</a>
-                    <a href="#">Legales</a>
-                    <a href="#">Preguntas Frecuentes</a>
-                    <a href="#">Términos y condiciones</a>
-                </nav>
-            </div>
-        </div>
-        <p class="main-footer__copyright">Copyright 2022 © Juguetería Cósmica. Todos los derechos Reservados.</p>
     </footer>
 
     <script src="js/main.js"></script>

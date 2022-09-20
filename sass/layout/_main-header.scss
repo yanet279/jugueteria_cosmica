@@ -57,16 +57,27 @@ ul {
 
 .main-header {
     background-color: #fa2222;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-basis: 2px;
-    z-index: 0;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // flex-basis: 2px;
+    // z-index: 0;
     // @media (min-width: 1326px) {
     //     margin: 0 auto;
     // }
-    
 
+    &__container-top{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-basis: 2px;
+        z-index: 0;
+        @media (min-width: 1024px){
+            max-width: 1600px;
+            margin:0 auto;
+        }
+    }
+    
     &__logo-container{
         background-image: url(../../img/iconos/LogoMakr-74R8Ui.png);
         background-repeat: no-repeat;
