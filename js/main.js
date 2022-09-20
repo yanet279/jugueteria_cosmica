@@ -11,12 +11,14 @@ let flag;
 
 cartButtonContainer.addEventListener('click', e => {
     const botonCarrito = e.target.parentElement;
-    
+    console.log(e.target)
     if(flag==0){
-        botonCarrito.querySelector('#carrito').style.display="block";
+        console.log(1)
         flag=1;
+        botonCarrito.querySelector('.cart-button__row').style.display = "none";
     }else{
-        botonCarrito.querySelector('#carrito').style.display="none";
+        botonCarrito.querySelector('.cart-button__row').style.display = "block";
+        console.log(2)
         flag=0;
     }
     
@@ -24,7 +26,7 @@ cartButtonContainer.addEventListener('click', e => {
 
 document.addEventListener('keydown', e => {
     console.log(e.key)
-    const boton = document.querySelector('#carrito');
+    const boton = document.querySelector('.cart-button__row');
     if(e.key === 'Escape'){
         boton.style.display="none";
         flag=0;

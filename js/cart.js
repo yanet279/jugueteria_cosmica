@@ -1,43 +1,43 @@
-const carrito = document.getElementById('carrito');
-const contenedorCarrito = document.querySelector('#lista-carrito tbody');
-const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
-const listaArticulos = document.querySelector('.cards-container');
-let articulosArray = [];
+const cart = document.querySelector('.cart-button__row');
+const containerCart = document.querySelector('.cart-button__list tbody');
+const emptyCartBtn = document.querySelector('.cart-button__vaciar-carrito');
+const listArticles = document.querySelector('.cards-container');
+let articlesArray = [];
 
-cargarEventListeners();
+loadEventListeners();
 
-function cargarEventListeners(){
-    listaArticulos.addEventListener('click', agregarArticulo);
-    carrito.addEventListener('click', eliminarArticulo);
-    vaciarCarritoBtn.addEventListener('click', () => {
-        articulosArray = [];
-        limpiarHTML();
+function loadEventListeners(){
+    listArticles.addEventListener('click', addArticle);
+    cart.addEventListener('click', removeArticle);
+    emptyCartBtn.addEventListener('click', () => {
+        articlesArray= [];
+        cleanHTML();
     })
 }
 
 //eliminar un articulo del carrito
-function eliminarArticulo(e){
-    if(e.target.classList.contains('borrar-articulo')){
+function removeArticle(e){
+    if(e.target.classList.contains('cart-button__delete-article')){
         const articuloId = e.target.getAttribute('data-id');
         
         //eliminar producto del carrito por data-id
-        articulosArray = articulosArray.filter( articulo => articulo.id !== articuloId);
+        articlesArray = articlesArray.filter( articulo => articulo.id !== articuloId);
 
-        carritoHTML();
+        cartHTML();
     }
 }
 
-function agregarArticulo(e){
+function addArticle(e){
     e.preventDefault();
     if(e.target.classList.contains('agregar-carrito')){
-        const articuloSeleccionado = e.target.parentElement.parentElement.parentElement;
-        leerDatosArticulos(articuloSeleccionado);
+        const selectedArticle = e.target.parentElement.parentElement.parentElement;
+        readArticleData(selectedArticle);
     }
 }
 
-function leerDatosArticulos(articulo){
+function readArticleData(articulo){
     // objeto articulo actual
-    const infoArticulo = {
+    const infoArticle = {
         imagen: articulo.querySelector('img').src ,
         titulo: articulo.querySelector('.card__heading').textContent,
         precio: articulo.querySelector('.card__price-final').textContent,
@@ -46,12 +46,12 @@ function leerDatosArticulos(articulo){
     }
     //console.table(infoArticulo);
 
-    const existe = articulosArray.some( articulo => articulo.id === infoArticulo.id )
+    const existe = articlesArray.some( articulo => articulo.id === infoArticle.id )
 
     if(existe){
         //actualizamos cantidad
-        const articulos = articulosArray.map( articulo => {
-            if(articulo.id === infoArticulo.id){
+        const cantArticles = articlesArray.map( articulo => {
+            if(articulo.id === infoArticle.id){
                 articulo.cantidad++;
                 return articulo; //retorna objeto actualizado
             }else{
@@ -59,24 +59,24 @@ function leerDatosArticulos(articulo){
             }
         })
 
-        articulosArray = [...articulos];
+        articlesArray= [...cantArticles];
     }else{
 
         // agregar elementos al array=carrito
-        articulosArray = [...articulosArray, infoArticulo];
+        articlesArray= [...articlesArray, infoArticle];
     }
 
-    carritoHTML();
+    cartHTML();
 }
 
-function carritoHTML(){
+function cartHTML(){
 
     //limpiar html del carrito
-    limpiarHTML();
+    cleanHTML();
 
-    articulosArray.forEach( articulo => {
+    articlesArray.forEach( article => {
         
-        const { imagen, titulo, precio, cantidad } = articulo;
+        const { imagen, titulo, precio, cantidad } = article;
         const row = document.createElement('tr');
         row.innerHTML = 
         `
@@ -84,14 +84,14 @@ function carritoHTML(){
             <td>${titulo}</td>
             <td>${precio}</td>
             <td>${cantidad}</td>
-            <td><a href='#' class='borrar-articulo' data-id='${articulo.id}'>X</a></td>
+            <td><a href='#' class='cart-button__delete-article' data-id='${article.id}'>X</a></td>
         `;
         //agregar el html
-        contenedorCarrito.appendChild(row);
+        containerCart.appendChild(row);
     })
 
 }
 
-function limpiarHTML(){
-    contenedorCarrito.innerHTML = ''; 
+function cleanHTML(){
+    containerCart.innerHTML = ''; 
 }
