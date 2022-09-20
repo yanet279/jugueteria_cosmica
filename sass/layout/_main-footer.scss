@@ -24,6 +24,7 @@
             text-align: center;
             
             & h3 {
+                font-family: 'Hammersmith One', sans-serif;
                 text-transform: uppercase;
                 font-weight: bold;
             }
@@ -35,6 +36,7 @@
             }
 
             & ul li {
+                list-style-type: none;
                 padding: 5px 0;
             }
             
