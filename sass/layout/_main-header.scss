@@ -133,9 +133,7 @@
         background-size: 29px;
         margin-left: auto;
         width: 55px;
-        
         cursor: pointer;
-        // padding: 0;
         
         @media (min-width: 768px){
             background-position: left 30px;
@@ -147,26 +145,18 @@
 
         @media (min-width: 1024px) {
         }
-        
-        &--press {
-            background-color: #770a0e23;
-            display: flex;
-            background-position: center 11px;
-            margin-top: 8px;
-            margin-right: 3px;
-            padding-bottom: 15px;
-            width: 50px;
-            height: 48px;
-            border-radius: 50%;
-            box-shadow: 0 -5px 3px -3px rgba(51, 50, 50, 0.207) inset,
-                        1px -8px 8px -7px rgba(0, 0, 0, 0.158) inset;
-            
-            @media (min-width: 768px) {
-                // margin-top: 15px;
-                margin: auto;
-                background-position: center 11px;
-            }
-        }
+
+        // &--press:hover {
+        //     // margin-right: 5px;
+        //     position: absolute;
+        //     background-position: 7px 7px;
+        //     right: 52px;
+        //     margin-top: 11px;
+        //     border-radius: 50%;
+        //     height: 43px;
+        //     width: 45px;
+        //     outline: #f4f4f4 solid 1px;
+        // }
     }
 
     &__hamburger-button-container {

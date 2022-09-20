@@ -24,12 +24,12 @@
             </div>
     
             <!--TODO CARRITO -->
-            <div class="main-header__cart-button-container">
+            <div class="main-header__cart-button-container main-header__cart-button-container--press">
                 <ul class="cart-button">
-                    <li class="submenu">
+                    <li class="cart-button__submenu">
                         <!-- <img src="img/iconos/carrito-de-compras.png" alt="carrito" width="30" height="30"> -->
-                        <div id="carrito">                         
-                            <table id="lista-carrito" class="u-full-width">
+                        <div class="cart-button__row">                         
+                            <table class="cart-button__list u-full-width">
                                 <thead>
                                     <tr>
                                         <th>Imagen</th>
@@ -39,9 +39,10 @@
                                         <th></th>
                                     </tr>
                                 </thead>
+                                
                                 <tbody></tbody>
                             </table>
-                            <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            <a href="#" class="button u-full-width cart-button__vaciar-carrito">Vaciar Carrito</a>
                         </div>
                     </li>
                 </ul>

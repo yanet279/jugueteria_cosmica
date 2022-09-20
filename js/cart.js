@@ -86,6 +86,8 @@ function cartHTML(){
             <td>${cantidad}</td>
             <td><a href='#' class='cart-button__delete-article' data-id='${article.id}'>X</a></td>
         `;
+
+        console.log(row);
         //agregar el html
         containerCart.appendChild(row);
     })
