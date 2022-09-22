@@ -11,6 +11,7 @@ window.addEventListener('load', ()=> {
     loadEventListeners();
 
     function loadEventListeners() {
+        console.log('listArticles:', listArticles);
         listArticles.addEventListener('click', addArticle);
         cart.addEventListener('click', removeArticle);
         emptyCartBtn.addEventListener('click', () => {
@@ -68,7 +69,6 @@ window.addEventListener('load', ()=> {
 
             // agregar elementos al array=carrito
             articlesArray = [...articlesArray, infoArticle];
-            console.log(articlesArray);
         }
 
         cartHTML();

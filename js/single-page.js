@@ -1,3 +1,8 @@
+// import {carrusel} from './carrousel.js';
+// const a = document.querySelector('body');
+
+// a.addEventListener('load', carrusel());
+
 const getIdFromHash = () => location.hash ? location.hash.slice(1) : 'inicio';
 const getUrlFromId = id => `templates/${id}.html`;
 
@@ -40,12 +45,12 @@ function getTemplates() {
         link.addEventListener('click', e => {
             e.preventDefault();
             const id = e.target.href.split('#')[1];
-            console.log('id 2:', id);
             location.hash = id;
         });
     });
 
     window.addEventListener('hashchange', e => {
+        console.log('from:', getIdFromHash());
         let id = getIdFromHash();
         let carousel = document.querySelector('.carousel-articles');
 
@@ -54,11 +59,6 @@ function getTemplates() {
         // }
         console.log('id:', id);
 
-        if(id !== '/inicio') {
-            carousel.style.display = 'none';
-        }else {
-            carousel.style.display = 'block';
-        }
         const url = getUrlFromId(id);
         loadAjaxResponseToElement(url, response => {
             mainElement.innerHTML = response;
@@ -94,4 +94,3 @@ function loadAjaxResponseToElement(url, callbackOnLoad) {
         }
     });
 }
-
