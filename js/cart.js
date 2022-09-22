@@ -1,8 +1,9 @@
 window.addEventListener('load', ()=> {
-    const cart = document.querySelector('.cart-button__row');
+    const cart = document.querySelector('.cart-button__row-select');
     const containerCart = document.querySelector('.cart-button__list tbody');
-    const emptyCartBtn = document.querySelector('.cart-button__vaciar-carrito');
-    const listArticles = document.querySelector('.cards-container');
+    let emptyCartBtn = document.querySelector('.cart-button__vaciar-carrito');
+    let listArticles = document.querySelector('.cards-container');
+    console.log(listArticles)
     let articlesArray = [];
 
     console.log(cart);
@@ -11,8 +12,8 @@ window.addEventListener('load', ()=> {
     loadEventListeners();
 
     function loadEventListeners() {
-        console.log('listArticles:', listArticles);
         listArticles.addEventListener('click', addArticle);
+        console.log('listArticles:', listArticles);
         cart.addEventListener('click', removeArticle);
         emptyCartBtn.addEventListener('click', () => {
             articlesArray= [];
@@ -34,7 +35,7 @@ window.addEventListener('load', ()=> {
 
     function addArticle(e){
         e.preventDefault();
-        if(e.target.classList.contains('agregar-carrito')){
+        if(e.target.classList.contains('card__link-buy')){
             const selectedArticle = e.target.parentElement.parentElement.parentElement;
             readArticleData(selectedArticle);
         }
