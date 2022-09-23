@@ -1102,6 +1102,76 @@ body {
   background-color: rgba(255, 140, 0, 0.8156862745);
 }
 
+.main-we__img {
+  display: flex;
+  justify-content: center;
+}
+.main-we__container {
+  margin: auto;
+  max-width: 1000px;
+  border: 2px solid #000;
+  padding: 0 50px;
+  display: flex;
+  min-width: 400px;
+}
+.main-we__container-text {
+  float: right;
+  text-align: justify;
+  padding: 20px 20px 30px;
+  width: 600px;
+}
+.main-we__container-text h1 {
+  margin: 20px 0 30px;
+  font-size: 45px;
+  font-family: "Fredoka One", cursive;
+}
+.main-we__container-img {
+  overflow: visible;
+  padding-right: 50px;
+  margin-top: 100px;
+  background-image: url(/img/portada/image.jpg);
+  background-size: 400px 300px;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
+.main-we__team {
+  border: 2px solid #000;
+  margin: auto;
+  max-width: 1000px;
+  min-width: 400px;
+  padding: 0 50px;
+}
+
+.team-profile {
+  border-radius: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(188, 183, 183);
+  min-width: 350px;
+  max-width: 600px;
+}
+.team-profile__img {
+  align-self: center;
+  margin: auto;
+  width: 180px;
+  height: 180px;
+}
+.team-profile__img img {
+  border: #444 solid 2px;
+  border-radius: 20px;
+  height: 160px;
+  display: block;
+  width: 180px;
+}
+.team-profile__data {
+  padding: 15px;
+  min-width: 300px;
+  max-width: 380px;
+  text-align: justify;
+}
+
 .main-form {
   max-width: 60rem;
   margin: 80px auto;

@@ -1,8 +1,7 @@
-window.addEventListener('load', ()=> {
+
+/////////////////////         MAIN         //////////////////////
+
     let cartButtonContainer = document.querySelector('.main-header__cart-button-container');
-    // let inputCreated = false;
-    // let cartModalContainer = document.querySelectorAll('div')[0];
-    // let container = document.querySelector('.sections-carousel');
     let hamburgerContainer = document.querySelector('.main-header__hamburger-button-container');
     // let navContainer = document.querySelector('.main.nav');
 
@@ -42,4 +41,68 @@ window.addEventListener('load', ()=> {
         bottonBread.classList.toggle('hamburger-button__botton-bread--close')
     })
 
-})
+///////////////////////    SPA    //////////////////////////////
+    const getIdFromHash = () => location.hash ? location.hash.slice(1) : 'inicio';
+    const getUrlFromId = id => `../templates/${id}.html`;
+    const scripts = js => `/js/${js}.js`;
+
+    const main = document.querySelector('main');
+    let links = document.querySelectorAll('.main-nav__link');
+
+    function ajaxInit(url, method = 'get') {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.send();
+        return xhr;
+    }
+
+    console.log(getTemplates());
+    function getTemplates() {
+        let id = getIdFromHash();
+        const url = getUrlFromId(id);
+        loadAjaxResponseToElement(url, response => {
+            main.innerHTML = response;
+            // console.log('Página inicial cargada');
+            setActiveLink();
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();            
+                const id = link.id;
+                location.hash = id;
+            });
+        });
+
+        window.addEventListener('hashchange', e => {
+            let id = getIdFromHash();
+            const url = getUrlFromId(id);
+            loadAjaxResponseToElement(url, response => {
+
+                main.innerHTML = response;
+                console.log('Contenido cargado por el cambio de hash');
+                setActiveLink();
+            });
+        });
+    }
+    function setActiveLink () {
+        // console.warn('se recorren los links. Id actual:');
+        links.forEach(link => {
+            if (link.id === location.href.split('#')[1]) {
+                link.classList.add('active');
+                link.ariaCurrent = 'page';
+            } else {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            }
+        });
+    }
+
+    function loadAjaxResponseToElement(url, callbackOnLoad) {
+        const xhr = ajaxInit(url);
+        xhr.addEventListener('load', e => {
+            if (e.target.status === 200) {
+                callbackOnLoad(e.target.responseText);
+            }
+        });
+    }

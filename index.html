@@ -13,7 +13,68 @@
 
     <input type="checkbox" id="main-nav-toggle" class="main-nav-toggle">
     <header class="main-header">
+        <div class="main-header__container-top">
+            <div class="main-header__logo-container">
+            </div>
+            <div class="main-header__search-form-container">
+                <input type="text" id="search" name="search" autocomplete="off" placeholder="Buscar productos ..." disabled>
+                <label for="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+            </div>
         
+            <!--TODO CARRITO -->
+            <div class="main-header__cart-button-container main-header__cart-button-container--press">
+                <ul class="cart-button">
+                    <li class="cart-button__submenu">
+                        <!-- <img src="img/iconos/carrito-de-compras.png" alt="carrito" width="30" height="30"> -->
+                        <div class="cart-button__row cart-button__row-select">                         
+                            <table class="cart-button__list u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" class="cart-button__vaciar-carrito u-full-width">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="main-header__hamburger-button-container">
+                <label class="hamburger-button" for="main-nav-toggle" title="Expandir barra de navegación">
+                    <span class="hamburger-button__top-bread"></span>
+                    <span class="hamburger-button__meat"></span>
+                    <span class="hamburger-button__botton-bread"></span>
+                </label>
+            </div> 
+        </div>
+        <div class="main-header__main-nav-container">
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item" >
+                        <a class="main-nav__link" id="inicio" href="#/inicio">Inicio</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link active" id="alta" aria-current="page" href="#/alta">Alta</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" id="contacto" href="#/contacto">Contacto</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" id="nosotros" href="#/nosotros">Nosotros</a>
+                    </li>
+                    <span class="main-nav__indicator"></span>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -65,9 +126,7 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/single-page.js"></script>
-    <script src="js/carrousel.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/inicio.js"></script>
     
 </body>
 </html>
