@@ -26,12 +26,19 @@
     }
     
     &__img {
-        margin-right: auto;
-        width: calc(100% / 2 - 2em);
+        margin: 0 auto;
+        width: calc(100% / 2 - 1.1em);
         color: #393939;
         min-height: 10vh;
         transition: all .4s ease;
         background-color: #ececec;
+
+        @media (max-width: 768px) {
+            width: calc(100% / 2 - .8em);
+        }
+        @media (min-width: 1374px) {
+            width: calc(100% / 2 - 1.6em);
+        }
     }
 
     &__slider {

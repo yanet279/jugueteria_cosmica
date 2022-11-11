@@ -1,4 +1,4 @@
-window.addEventListener ('load', () => {
+setTimeout(()=>{
 
    //////////////////       CARRITO        ///////////////////////////////
     const cart = document.querySelector('.cart-button__row-select');
@@ -115,6 +115,7 @@ window.addEventListener ('load', () => {
         sliderPoint[i].addEventListener('click', () => {                
             let positions = i;
             let operation = positions * -50;
+            console.log(operation)
 
             imagesCarousel.style.transform = `translateX(${operation}%)`
 
@@ -125,5 +126,4 @@ window.addEventListener ('load', () => {
             sliderPoint[i].classList.add('carousel-articles__slider-point--active')
         })    
     });
-
-});
+}, 1000);

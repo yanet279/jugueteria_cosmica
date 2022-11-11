@@ -1,9 +1,9 @@
 .main-footer {
     color: #f4f4f4;
     border-top: 3px solid #86afcb;
-    margin-top: 3rem;
     padding: 2rem 0 .02rem;
-    background-color: #d81d13;
+    background: linear-gradient(180deg, #df436a -5%, #28134e 60%);
+    // background-color: #d81d13;
 
     &__container {
         @media (min-width: 1024px){

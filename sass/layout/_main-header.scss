@@ -8,15 +8,8 @@
 }
 
 .main-header {
-    background-color: #fa2222;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    // flex-basis: 2px;
-    // z-index: 0;
-    // @media (min-width: 1326px) {
-    //     margin: 0 auto;
-    // }
+    // margin-top: 10px;
+    background: linear-gradient(0deg, #df436a 0%, #28134e 120%);
 
     &__container-top{
         display: flex;
@@ -31,7 +24,7 @@
     }
     
     &__logo-container{
-        background-image: url(../../img/iconos/LogoMakr-74R8Ui.png);
+        background-image: url(../../img/iconos/LogoMakr-1LfAPu.png);
         background-repeat: no-repeat;
         background-size: 150px 55px;
         background-position: 5px;
@@ -66,30 +59,30 @@
         padding: 1em 1em;
         flex-grow: 0;
         display: flex;
-        background-color: #d81d13;
 
         width: 100%;
         order: 1;
         
         & input {
-            background-color: #f4f4f4;
+            background-color: #f4f4f4f4;
             padding-left: 13px;
             border-radius: 20px 0 0 20px; 
-            border: solid 3px #fa2222;
+            border: solid 4px #440851ce;
             width: 100%;
             height: 45px;
                 
             @media (min-width: 768px) {
                 border-top: 1px solid rgba(32, 32, 32, 0.096);
                 height: 48px;
-                border: solid 3px #d81d13;
+                border: solid 3.5px #b30631b5;
             }
         }
         
         & label{
+            border: #603372 5px solid;
             border-radius:0 20px 20px 0; 
             padding-right: 5px;
-            background-color: #fa2222;
+            background-color: #603372;
             width: 60px;
             color: #f4f4f4;
             height: 45px;
@@ -98,12 +91,13 @@
             align-items: center;
             & i {
                 font-size: 30px;
-                // font-weight: 600;
             }
             
             @media (min-width:768px) {
                 height: 48px;
-                background-color: #d81d13;
+                border: #c04463 3.5px solid;
+                background-color: #c04463;
+
             } 
         }
         
@@ -114,7 +108,7 @@
         
         @media (min-width: 768px){
             // border: solid red 2px;
-            background-color: #fa2222;
+            // background-color: #fa2222;
             width: 80%;
             max-width: 900px;
             order: 2;
@@ -173,7 +167,7 @@
         display: none;
         flex-grow: 1;
         top: 50px;
-        background-color: #d81d13;
+        background-color: #2b0f0d3e;
 
         
         @media (min-width: 768px){

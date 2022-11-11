@@ -9,11 +9,34 @@
 }
 
 body{
+    background-image: url(../../img/fondo-de-pantalla/3b0d2ef413749292dffc628afd5c0c21.png);
+    background-size: 300px 300px;
     font-family: 'Inter', sans-serif;
     box-sizing: border-box; /* Todos los elemento de la pagina heredan de body; o sea el h1, p, b y strong van a heredar el box-sizing de body*/
     background-color: #f4f4f4;
+    
+    & .extra {
+        
+        width: 100%;
+        font-weight: bold;
+        margin: -15px 0;
+        
+        font-size: 13px;
+        padding: 6px;
+        text-shadow: .1px .4px 0 #000;
+        color: #f4f4f4;
+        background-color: #f79c2d;
+        text-align: center;
+        
+
+        & oferta {
+            text-transform: uppercase;
+        }
+
+    }
 }
 main {
+    background-size: 300px 300px;
     @media (min-width: 1024px){
         max-width: 1600px;
         margin:0 auto;

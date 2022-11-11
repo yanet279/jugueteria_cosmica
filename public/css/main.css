@@ -317,11 +317,30 @@ template {
 }
 
 body {
+  background-image: url(../../img/fondo-de-pantalla/3b0d2ef413749292dffc628afd5c0c21.png);
+  background-size: 300px 300px;
   font-family: "Inter", sans-serif;
   box-sizing: border-box; /* Todos los elemento de la pagina heredan de body; o sea el h1, p, b y strong van a heredar el box-sizing de body*/
   background-color: #f4f4f4;
 }
+body .extra {
+  width: 100%;
+  font-weight: bold;
+  margin: -15px 0;
+  font-size: 13px;
+  padding: 6px;
+  text-shadow: 0.1px 0.4px 0 #000;
+  color: #f4f4f4;
+  background-color: #f79c2d;
+  text-align: center;
+}
+body .extra oferta {
+  text-transform: uppercase;
+}
 
+main {
+  background-size: 300px 300px;
+}
 @media (min-width: 1024px) {
   main {
     max-width: 1600px;
@@ -377,7 +396,7 @@ body {
 }
 
 .main-header {
-  background-color: #fa2222;
+  background: linear-gradient(0deg, #df436a 0%, #28134e 120%);
 }
 .main-header__container-top {
   display: flex;
@@ -393,7 +412,7 @@ body {
   }
 }
 .main-header__logo-container {
-  background-image: url(../../img/iconos/LogoMakr-74R8Ui.png);
+  background-image: url(../../img/iconos/LogoMakr-1LfAPu.png);
   background-repeat: no-repeat;
   background-size: 150px 55px;
   background-position: 5px;
@@ -431,15 +450,14 @@ body {
   padding: 1em 1em;
   flex-grow: 0;
   display: flex;
-  background-color: #d81d13;
   width: 100%;
   order: 1;
 }
 .main-header__search-form-container input {
-  background-color: #f4f4f4;
+  background-color: rgba(244, 244, 244, 0.9568627451);
   padding-left: 13px;
   border-radius: 20px 0 0 20px;
-  border: solid 3px #fa2222;
+  border: solid 4px rgba(68, 8, 81, 0.8078431373);
   width: 100%;
   height: 45px;
 }
@@ -447,13 +465,14 @@ body {
   .main-header__search-form-container input {
     border-top: 1px solid rgba(32, 32, 32, 0.096);
     height: 48px;
-    border: solid 3px #d81d13;
+    border: solid 3.5px rgba(179, 6, 49, 0.7098039216);
   }
 }
 .main-header__search-form-container label {
+  border: #603372 5px solid;
   border-radius: 0 20px 20px 0;
   padding-right: 5px;
-  background-color: #fa2222;
+  background-color: #603372;
   width: 60px;
   color: #f4f4f4;
   height: 45px;
@@ -467,7 +486,8 @@ body {
 @media (min-width: 768px) {
   .main-header__search-form-container label {
     height: 48px;
-    background-color: #d81d13;
+    border: #c04463 3.5px solid;
+    background-color: #c04463;
   }
 }
 @media (min-width: 480px) {
@@ -478,7 +498,6 @@ body {
 }
 @media (min-width: 768px) {
   .main-header__search-form-container {
-    background-color: #fa2222;
     width: 80%;
     max-width: 900px;
     order: 2;
@@ -520,7 +539,7 @@ body {
   display: none;
   flex-grow: 1;
   top: 50px;
-  background-color: #d81d13;
+  background-color: rgba(43, 15, 13, 0.2431372549);
 }
 @media (min-width: 768px) {
   .main-header__main-nav-container {
@@ -671,9 +690,8 @@ body {
 .main-footer {
   color: #f4f4f4;
   border-top: 3px solid #86afcb;
-  margin-top: 3rem;
   padding: 2rem 0 0.02rem;
-  background-color: #d81d13;
+  background: linear-gradient(180deg, #df436a -5%, #28134e 60%);
 }
 @media (min-width: 1024px) {
   .main-footer__container {
@@ -932,12 +950,12 @@ body {
   }
 }
 .card__content {
-  background-color: rgba(140, 139, 138, 0.2745098039);
+  background-color: rgba(73, 74, 74, 0.3921568627);
   padding: 0 15px 10px 15px;
 }
 .card__content > h2 {
   color: #272727;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 100;
 }
 @media (min-width: 360px) {
@@ -973,7 +991,7 @@ body {
   grid-column-start: 1;
   grid-column-end: 3;
   font-weight: 400px;
-  font-size: 15px;
+  font-size: 10px;
 }
 @media (min-width: 480px) {
   .card__heading {
@@ -1001,8 +1019,8 @@ body {
   margin: 3px 0 4px;
   margin-right: 5px;
   text-decoration: line-through;
-  color: #999;
-  font-size: 12px;
+  color: rgb(249, 244, 244);
+  font-size: 13px;
   font-weight: 100;
 }
 .card__price-discount {
@@ -1010,7 +1028,8 @@ body {
   height: 20px;
   padding: 2px 3px;
   font-size: 14px;
-  color: #36b20c;
+  color: #29c63b;
+  font-weight: bold;
 }
 .card__price-final {
   flex-basis: 80%;
@@ -1019,6 +1038,11 @@ body {
 @media (min-width: 360px) {
   .card__price-final {
     flex-basis: 90%;
+  }
+}
+@media (min-width: 480px) {
+  .card__price-final {
+    font-size: 20px;
   }
 }
 .card__link {
@@ -1072,12 +1096,22 @@ body {
   }
 }
 .carousel-articles__img {
-  margin-right: auto;
-  width: calc(50% - 2em);
+  margin: 0 auto;
+  width: calc(50% - 1.1em);
   color: #393939;
   min-height: 10vh;
   transition: all 0.4s ease;
   background-color: #ececec;
+}
+@media (max-width: 768px) {
+  .carousel-articles__img {
+    width: calc(50% - 0.8em);
+  }
+}
+@media (min-width: 1374px) {
+  .carousel-articles__img {
+    width: calc(50% - 1.6em);
+  }
 }
 .carousel-articles__slider {
   width: 100%;
@@ -1102,45 +1136,58 @@ body {
   background-color: rgba(255, 140, 0, 0.8156862745);
 }
 
+.main-we {
+  width: 1100px;
+  min-width: 500px;
+  margin: auto;
+}
 .main-we__img {
   display: flex;
   justify-content: center;
 }
-.main-we__container {
-  border-radius: 20px;
-  margin: 0 auto 30px;
-  max-width: 1000px;
-  border: 2px solid #000;
-  padding: 0 50px;
-  display: flex;
-  min-width: 400px;
-}
 .main-we__container-text {
-  float: right;
+  border-radius: 20px;
+  margin: auto;
+  max-width: 500px;
+  min-width: 400px;
+  border: 2px solid #000;
   text-align: justify;
   padding: 20px 20px 30px;
 }
+.main-we__container-text p {
+  min-width: 400px;
+}
 .main-we__container-text h1 {
-  margin: 20px 0 30px;
   font-size: 45px;
   font-family: "Fredoka One", cursive;
 }
 .main-we__container-text > img {
   margin: 0 0 20px 30px;
-  float: right;
-  overflow: visible;
+  float: inline-start;
   width: 400px;
   height: 370px;
 }
-.main-we__team {
+@media (min-width: 550px) {
+  .main-we__container-text {
+    min-width: 550px;
+    max-width: 1000px;
+  }
+  .main-we__container-text > img {
+    float: right;
+    border: #000 solid 2px;
+  }
+}
+.main-we__container-team {
   border: 2px solid #000;
   margin: auto;
   max-width: 1000px;
   min-width: 400px;
   padding: 0 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 20px;
 }
-
-.team-profile {
+.main-we__container-team .team-profile {
   border-radius: 20px;
   margin-top: 20px;
   display: flex;
@@ -1149,20 +1196,20 @@ body {
   min-width: 350px;
   max-width: 600px;
 }
-.team-profile__img {
+.main-we__container-team .team-profile__img {
   align-self: center;
   margin: 20px auto 0;
   width: 170px;
   height: 180px;
 }
-.team-profile__img img {
+.main-we__container-team .team-profile__img img {
   border: #444 solid 2px;
   border-radius: 20px;
   height: 160px;
   display: block;
   width: 180px;
 }
-.team-profile__data {
+.main-we__container-team .team-profile__data {
   padding: 15px 25px 15px 10px;
   min-width: 300px;
   max-width: 380px;
@@ -1220,51 +1267,57 @@ body {
   border: 1px solid #e1e1e1;
 }
 
-.row-container {
-  border: solid 1px #f77b15;
-  border-radius: 5px;
-  width: 85%;
-  max-width: 600px;
-  margin: 80px auto 20px;
-  background-color: rgba(246, 235, 178, 0.8078431373);
-  padding-bottom: 50px;
+.alta-form {
+  display: flex;
 }
-.row-container legend {
-  font-size: 38px;
-  background-color: #f77b15;
-  padding: 15px 0;
+.alta-form__right {
+  background-image: url(../../img/fondo-de-pantalla/alta-form-1.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.alta-form__left {
+  background-color: rgba(228, 46, 113, 0.4509803922);
+  width: 100%;
+  padding: 10px;
+}
+.alta-form__left h1 {
+  font-family: "Fredoka One", cursive;
+  text-transform: uppercase;
+  font-weight: bold;
   text-align: center;
-  width: 450px;
-  margin: 0 auto 45px;
-  color: #f4f4f4;
-  border-radius: 5px;
-  box-shadow: 3px 5px 8px 1px rgba(185, 115, 3, 0.3529411765);
 }
-.row-container__data label {
-  display: inline-block;
-  width: 120px;
-  margin: 15px 20px;
+@media (min-width: 360px) {
+  .alta-form__left h1 {
+    min-width: 340px;
+  }
 }
-.row-container__data input {
+.alta-form__left .row-container__data {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+.alta-form__left .row-container__data input {
+  margin: 15px 10px;
   background: transparent;
   border: 0;
   border-bottom: 2px solid #d97000;
-  width: 17em;
+  width: 90%;
 }
-.row-container__data input:hover, .row-container__data input:focus {
+.alta-form__left .row-container__data input:hover, .alta-form__left .row-container__data input:focus {
   box-shadow: 2px 2px 2px 0 rgb(244, 178, 66);
   border-radius: 5px;
   height: 30px;
   background-color: #f4f4f4;
   outline: none;
 }
-.row-container__description {
+.alta-form__left .row-container__description {
   margin: 15px 20px;
 }
-.row-container__description-label {
+.alta-form__left .row-container__description-label {
   margin-bottom: 10px;
 }
-.row-container__description textarea {
+.alta-form__left .row-container__description textarea {
   background-color: #f4f4f4;
   border: solid 2px #d97000;
   padding: 8px;
@@ -1272,33 +1325,46 @@ body {
   resize: vertical;
   display: flex;
   margin: auto;
-  width: 350px;
+  width: 80%;
   height: 90px;
 }
-.row-container__free-shipping {
+.alta-form__left .row-conteiner__free-shipping {
   margin: 20px 20px 10px;
 }
-.row-container__free-shipping input {
+.alta-form__left .row-conteiner__free-shipping input {
   background-color: #f4f4f4;
   vertical-align: bottom;
   height: 18px;
   width: 18px;
   margin-left: 10px;
 }
-.row-container__photo {
+.alta-form__left .row-container__photo {
   margin: 15px 20px 10px;
 }
-.row-container__photo input[type=file] {
+.alta-form__left .row-container__photo input[type=file] {
   margin-left: 10px;
   text-align: center;
 }
-
-.button-container {
+@media (min-width: 480px) {
+  .alta-form__left {
+    padding: 20px;
+    min-width: 400px;
+    width: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .alta-form__left {
+    padding: 20px;
+    min-width: 500px;
+    width: 800px;
+  }
+}
+.alta-form__left .button-container {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
 }
-.button-container__alta {
+.alta-form__left .button-container__alta {
   color: #f4f4f4;
   background-color: rgba(8, 30, 95, 0.8549019608);
   font-size: 15px;

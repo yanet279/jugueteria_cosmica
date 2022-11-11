@@ -1,79 +1,88 @@
 .main-we{
+    width: 1100px;
+    min-width: 500px;
+    margin: auto;
+    // display: block;
     &__img {
         display: flex;
         justify-content: center;
     }
 
-    &__container {
+    &__container-text{
         border-radius: 20px;
-        margin: 0 auto 30px;
-        max-width: 1000px;
-        border: 2px solid #000;
-        padding: 0 50px;
-        // font-weight: bold;
-        display: flex;
-        // justify-content: center;
+        margin: auto;
+        max-width: 500px;
         min-width: 400px;
+        border: 2px solid #000;
+        text-align: justify;
+        padding: 20px 20px 30px; 
+
+        & p {
+            min-width: 400px;
+        }
         
-        &-text {
-            float: right;
-            text-align: justify;
-            padding: 20px 20px 30px; 
-            // width: 600px;
-            & p {
-                // margin-left: 50px;
-            }
-            
-            & h1 {
-                margin: 20px 0 30px;
-                font-size: 45px;
-                font-family: 'Fredoka One', cursive;
-            } 
+        & h1 {
+            // margin: 20px 0 30px;
+            font-size: 45px;
+            font-family: 'Fredoka One', cursive;
+        } 
+        & > img {
+            margin: 0 0 20px 30px;
+            float: inline-start;
+            width: 400px;
+            height: 370px;
+        }
+
+        @media (min-width: 550px) {
+            min-width: 550px;
+            max-width: 1000px;
             & > img {
-                margin: 0 0 20px 30px;
                 float: right;
-                overflow: visible;
-                width: 400px;
-                height: 370px;
+                border: #000 solid 2px;
             }
         }
+
     }
 
-    &__team {
+    &__container-team {
         border: 2px solid #000;
         margin: auto;
         max-width: 1000px;
         min-width: 400px;
         padding: 0 50px;
-    }
-}
-.team-profile{
-    border-radius: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 20px;
     
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    border: 2px solid rgb(188, 183, 183);
-    min-width: 350px;
-    max-width: 600px;
-    &__img {
-        align-self: center;
-        margin: 20px auto 0;
-        width: 170px;
-        height: 180px;
-        & img {
-            border: #444 solid 2px;
+
+        & .team-profile{
             border-radius: 20px;
-            height: 160px;
-            display: block;
-            width: 180px;
+            
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid rgb(188, 183, 183);
+            min-width: 350px;
+            max-width: 600px;
+            &__img {
+                align-self: center;
+                margin: 20px auto 0;
+                width: 170px;
+                height: 180px;
+                & img {
+                    border: #444 solid 2px;
+                    border-radius: 20px;
+                    height: 160px;
+                    display: block;
+                    width: 180px;
+                }
+            }
+            &__data {
+                padding: 15px 25px 15px 10px;
+                min-width: 300px;
+                max-width: 380px;
+                text-align: justify;
+            }
         }
     }
-    &__data {
-        padding: 15px 25px 15px 10px;
-        min-width: 300px;
-        max-width: 380px;
-        text-align: justify;
-    }
-        
 }
