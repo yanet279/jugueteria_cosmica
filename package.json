@@ -1,0 +1,27 @@
+{
+  "type": "module",
+  "name": "proyecto_integrador-etapa_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanet279/juegueteria_cosmica.git"
+  },
+  "keywords": [],
+  "author": "Yanet Choque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanet279/juegueteria_cosmica/issues"
+  },
+  "homepage": "https://github.com/yanet279/juegueteria_cosmica#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "joi": "^17.6.3",
+    "mongoose": "^6.6.1"
+  }
+}
