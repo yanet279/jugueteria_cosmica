@@ -1,0 +1,50 @@
+{{#if products.length }}
+    <table class="table-products">
+        <caption>Productos</caption>
+        <thead>
+            <tr>
+                <th scope="column">Id</th>
+                <th scope="column">Nombre</th>
+                <th scope="column">Precio</th>
+                <th scope="column">Stock</th>
+                <th scope="column">Marca</th>
+                <th scope="column">Categoría</th>
+                <th scope="column">Descripción corta</th>
+                <th scope="column">Descripción larga</th>
+                {{!-- <th scope="column">Envió</th> --}}
+                <th scope="column">Edad desde</th>
+                <th scope="column">Edad hasta</th>
+                <th scope="column">Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+                <tr data-id="{{id}}">
+                    <td class="cell-id">{{id}}</td>
+                    <td class="cell-name">{{name}}</td>
+                    <td class="cell-price">{{price}}</td>
+                    <td class="cell-stock">{{stock}}</td>
+                    <td class="cell-brand">{{brand}}</td>
+                    <td class="cell-category">{{category}}</td>
+                    <td class="cell-short-description">{{shortDescription}}</td>
+                    <td class="cell-long-description">{{longDescription}}</td>
+                    {{!-- <td class="cell-free-shipping">{{freeShipping}}</td> --}}
+                    <td class="cell-age-from">{{ageFrom}}</td>
+                    <td class="cell-age-until">{{ageUntil}}</td>
+                    <td class="cell-photo">{{photo}}</td>
+                    <td>
+                        <button class="btn-delete">❌</button>
+                        <button class="btn-edit">🖋️</button>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="10">Se encontraron {{products.length}} productos</td>
+            </tr>
+        </tfoot>
+    </table>
+{{else}}
+    <p>No se encontraron productos</p>
+{{/if}}

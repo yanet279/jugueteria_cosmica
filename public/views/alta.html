@@ -1,52 +1,65 @@
 
 <div class="alta-form">
     <div class="alta-form__left">
-        <form action="alta.html" method="post">
+        <form action="/api/products" method="post" id="form-alta-product">
             <!-- <fieldset class="row-container"> -->
                 <h1>Productos</h1>
+                <input type="hidden" id="id" name="id">
+
                 <div class="row-container__data">
                     <label for="name">Nombre: </label>
                     <input type="text" name="name" autofocus required>
                 </div>
+
                 <div class="row-container__data">
                     <label for="price">Precio: </label>
                     <input type="number" name="price">
                 </div>
+
                 <div class="row-container__data">
                     <label for="stock">Stock: </label>
                     <input type="number" name="stock">
                 </div>
+
                 <div class="row-container__data">
                     <label for="brand">Marca: </label>
                     <input type="text" name="brand">
                 </div>
+
                 <div class="row-container__data">
                     <label for="category">Categoría: </label>
                     <input type="text" name="category">
                 </div>
+
                 <div class="row-container__description">
                     <div class="row-container__description-label">
-                        <label for="long-description">Descripción corta: </label>
+                        <label for="shortDescription">Descripción corta: </label>
                     </div>
-                    <textarea class="short-description" name="short-description"></textarea>
+                    <textarea class="shortDescription" name="shortDescription"></textarea>
                 </div>
+
                 <div class="row-container__description">
                     <div class="row-container__description-label">
-                        <label for="long-description">Descripción larga: </label>
+                        <label for="longDescription">Descripción larga: </label>
                     </div>                
-                    <textarea class="long-description" name="short-description"></textarea>
+                    <textarea class="longDescription" name="longDescription"></textarea>
                 </div>
-                <div class="row-container__free-shipping">
-                    <label for="free-shipping">Envió sin cargo: </label>
-                    <input type="checkbox" name="free-shipping">
-                </div>
+
+                <!-- <div class="row-container__free-shipping">
+                    <label for="freeShipping">Envió sin cargo: </label>
+                    <input type="checkbox" name="freeShipping">
+                </div> -->
+
                 <div class="row-container__data">
-                    <label for="category">Edad desde: </label>
-                    <input type="number" name="category">
-                </div><div class="row-container__data">
-                    <label for="category">Edad hasta: </label>
-                    <input type="number" name="category">
+                    <label for="ageFrom">Edad desde: </label>
+                    <input type="number" name="ageFrom">
                 </div>
+
+                <div class="row-container__data">
+                    <label for="ageUntil">Edad hasta: </label>
+                    <input type="number" name="ageUntil">
+                </div>
+                
                 <div class="row-container__photo">
                     <label for="photo">Foto: </label>
                     <input type="file" name="photo">
@@ -54,10 +67,18 @@
             <!-- </fieldset> -->
         
             <div class="button-container">
-                <button class="button-container__alta" type="reset">Cancelar</button>
-                <button class="button-container__alta" type="submit">Crear producto</button>
+                <button class="button-container__alta" id="btn-create">Crear producto</button>
+                <button class="button-container__alta" id="btn-update" type="button" disabled>Guardar producto</button>
+                <button class="button-container__alta" id="btn-cancel" type="button" disabled>Cancelar</button>
             </div>
         </form>
     </div>
     <div class="alta-form__right"></div>
 </div>
+
+<section class="section-products-table">
+    <h2>Listado de productos</h2>
+    <div class="products-table-container">
+
+    </div>
+</section>

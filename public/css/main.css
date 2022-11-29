@@ -317,7 +317,7 @@ template {
 }
 
 body {
-  background-image: url(../../img/fondo-de-pantalla/3b0d2ef413749292dffc628afd5c0c21.png);
+  background-image: url(../img/fondo-de-pantalla/3b0d2ef413749292dffc628afd5c0c21.png);
   background-size: 300px 300px;
   font-family: "Inter", sans-serif;
   box-sizing: border-box; /* Todos los elemento de la pagina heredan de body; o sea el h1, p, b y strong van a heredar el box-sizing de body*/
@@ -412,7 +412,7 @@ main {
   }
 }
 .main-header__logo-container {
-  background-image: url(../../img/iconos/LogoMakr-1LfAPu.png);
+  background-image: url(../img/iconos/LogoMakr-1LfAPu.png);
   background-repeat: no-repeat;
   background-size: 150px 55px;
   background-position: 5px;
@@ -509,7 +509,7 @@ main {
   }
 }
 .main-header__cart-button-container {
-  background-image: url("../../img/iconos/icons8-shopping-trolley-64.png");
+  background-image: url("../img/iconos/icons8-shopping-trolley-64.png");
   background-repeat: no-repeat;
   background-position: center 18px;
   background-size: 29px;
@@ -1271,7 +1271,7 @@ main {
   display: flex;
 }
 .alta-form__right {
-  background-image: url(../../img/fondo-de-pantalla/alta-form-1.PNG);
+  background-image: url(../img/fondo-de-pantalla/alta-form-1.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

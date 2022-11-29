@@ -1,0 +1,68 @@
+[
+	{
+		"name": "Smart Watch 1",
+		"description": "color turquesa",
+		"price": "1111",
+		"id": "1"
+	},
+	{
+		"name": "Smart Watch 2",
+		"description": "color azul",
+		"price": "2222",
+		"id": "2"
+	},
+	{
+		"name": "Smart Watch 4",
+		"description": "color azul",
+		"price": "42500",
+		"id": "4"
+	},
+	{
+		"name": "Smart Watch",
+		"description": "color negro",
+		"price": "42500",
+		"id": "5"
+	},
+	{
+		"name": "Smart Watch",
+		"description": "color negro",
+		"price": "42500",
+		"id": "6"
+	},
+	{
+		"name": "Smart Watch",
+		"description": "color negro",
+		"price": "42500",
+		"id": "7"
+	},
+	{
+		"name": "Smart Watch",
+		"description": "color negro",
+		"price": "42500",
+		"id": "8"
+	},
+	{
+		"name": "Smart Watch",
+		"description": "color negro",
+		"price": "42500",
+		"id": "9"
+	},
+	{
+		"name": "Licuadora turbo",
+		"description": "Con 3 cuchillas intercambiables.",
+		"price": 34500,
+		"id": "10"
+	},
+	{
+		"name": "Parlante inalámbrico",
+		"description": "con batería de 3500 mAh (enviado con x-www-form-urlencoded)",
+		"price": "31500",
+		"id": "11"
+	},
+	{
+		"name": "Smart Watch",
+		"description": "color negro",
+		"price": "42500",
+		"id": "12"
+	}
+]

@@ -1,0 +1,29 @@
+{{#if products.length }}
+    {{#each products}}
+    <div class="card">
+        <div class="card">
+            <article class="card__article">
+                <div class="card__image-container">
+                    <img src="img/productos/D_NQ_NP_842720-MLA48344738924_112021-O.jpg" alt="Producto" class="card__image">
+                </div>
+                <div class="card__content">
+                    <h2 class="card__heading">{{name}}</h2>
+                    <div class="card__description">
+                        <p>{{shortDescription}}</p>
+                    </div>
+                    <div class="card__price"> 
+                        <span class="card__price-final">$ {{price}}</span>
+                        <input class="card__price-final-value" value="{{price}}" type="hidden">
+                        <span class="card__add-cart"></span>
+                    </div> 
+                    <div class="card__add-cart"></div>
+                    <div class="card__link">
+                        <a href="#" class="card__link-buy agregar-carrito" data-id="{{id}}">Agregar al carrito</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    {{/each}}
+{{else}}
+    <h2>No se encontraron productos</h2>
+{{/if}}

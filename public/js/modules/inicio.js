@@ -1,64 +1,76 @@
-setTimeout(()=>{
+import productController from '/js/controllers/product.js'
+class Inicio {
 
-   //////////////////       CARRITO        ///////////////////////////////
-    const cart = document.querySelector('.cart-button__row-select');
-    const containerCart = document.querySelector('.cart-button__list tbody');
-    let emptyCartBtn = document.querySelector('.cart-button__vaciar-carrito');
-    let listArticles = document.querySelector('.cards-container');
-    console.log(listArticles)
-    let articlesArray = [];
+    
+    //////////////////       CARRITO        ///////////////////////////////
+    static cart = document.querySelector('.cart-button__row-select');
+    static containerCart = document.querySelector('.cart-button__list tbody');
+    static emptyCartBtn = document.querySelector('.cart-button__vaciar-carrito');
+    static listArticles = document.querySelector('.cards-container');
+    static divTotal = document.querySelector('.cart-button__total');
+    static acumuladorTotal = 0;
+    static articlesArray = [];
 
-    console.log(cart);
-    console.log(articlesArray);
+    // loadEventListeners();
 
-    loadEventListeners();
+    static loadEventListeners() {
+        Inicio.listArticles.addEventListener('click', Inicio.addArticle);
+        Inicio.cart.addEventListener('click', Inicio.removeArticle);
+        Inicio.emptyCartBtn.addEventListener('click', () => {
+            Inicio.cleanHTML();
+            Inicio.articlesArray= [];
+            Inicio.acumuladorTotal = 0;
+            Inicio.divTotal.removeChild(Inicio.divTotal.lastChild)
 
-    function loadEventListeners() {
-        listArticles.addEventListener('click', addArticle);
-        console.log('listArticles:', listArticles);
-        cart.addEventListener('click', removeArticle);
-        emptyCartBtn.addEventListener('click', () => {
-            articlesArray= [];
-            cleanHTML();
         })
     }
 
     //eliminar un articulo del carrito
-    function removeArticle(e){
+    static removeArticle(e){
         if(e.target.classList.contains('cart-button__delete-article')){
+            const articleToClean = e.target.parentElement.parentElement;
+            const precio = articleToClean.querySelector('.prop_art_3');
+            const cantidad = articleToClean.querySelector('.prop_art_4');
+            let precioXCantidad = parseInt(precio.textContent) * parseInt(cantidad.textContent);
+            Inicio.acumuladorTotal = Inicio.acumuladorTotal - precioXCantidad;
+            
             const articuloId = e.target.getAttribute('data-id');
             
             //eliminar producto del carrito por data-id
-            articlesArray = articlesArray.filter( articulo => articulo.id !== articuloId);
+            Inicio.articlesArray = Inicio.articlesArray.filter( articulo => articulo.id !== articuloId);
 
-            cartHTML();
+            if(Inicio.divTotal.hasChildNodes())
+                Inicio.divTotal.removeChild(Inicio.divTotal.lastChild)
+            Inicio.cartHTML();
         }
     }
 
-    function addArticle(e){
+    static addArticle(e){
+        console.log('bbbbbbbbbbb');
         e.preventDefault();
         if(e.target.classList.contains('card__link-buy')){
             const selectedArticle = e.target.parentElement.parentElement.parentElement;
-            readArticleData(selectedArticle);
+            Inicio.readArticleData(selectedArticle);
         }
     }
 
-    function readArticleData(articulo){
+    static readArticleData(articulo){
         // objeto articulo actual
         const infoArticle = {
             imagen: articulo.querySelector('img').src,
             titulo: articulo.querySelector('.card__heading').textContent,
-            precio: articulo.querySelector('.card__price-final').textContent,
+            precio: articulo.querySelector('.card__price-final-value').value,
             id:     articulo.querySelector('a').getAttribute('data-id'),
             cantidad:1
         }
-        //console.table(infoArticulo);
+        Inicio.acumuladorTotal = parseInt(Inicio.acumuladorTotal) + parseInt(infoArticle.precio);
+        // console.table(infoArticulo);
 
-        const existe = articlesArray.some( articulo => articulo.id === infoArticle.id )
+        const existe = Inicio.articlesArray.some( articulo => articulo.id === infoArticle.id )
 
         if(existe){
             //actualizamos cantidad
-            const cantArticles = articlesArray.map(articulo => {
+            const cantArticles = Inicio.articlesArray.map(articulo => {
                 if(articulo.id === infoArticle.id){
                     articulo.cantidad++;
                     return articulo; //retorna objeto actualizado
@@ -67,63 +79,92 @@ setTimeout(()=>{
                 }
             })
 
-            articlesArray= [...cantArticles];
+            Inicio.articlesArray= [...cantArticles];
         }else{
-
             // agregar elementos al array=carrito
-            articlesArray = [...articlesArray, infoArticle];
+            Inicio.articlesArray = [...Inicio.articlesArray, infoArticle];
         }
 
-        cartHTML();
+        Inicio.cartHTML();
     }
 
-    function cartHTML(){
+    static cartHTML(){
 
         //limpiar html del carrito
-        cleanHTML();
+        Inicio.cleanHTML();
 
-        articlesArray.forEach( article => {
-            
+        Inicio.articlesArray.forEach( article => {
             const { imagen, titulo, precio, cantidad } = article;
             const row = document.createElement('tr');
+            const sumaTotal = document.createElement('p');
+            sumaTotal.textContent = Inicio.acumuladorTotal
+
             row.innerHTML = 
             `
-                <td ><img src='${imagen}' width='100'</td>
-                <td>${titulo}</td>
-                <td>${precio}</td>
-                <td>${cantidad}</td>
-                <td><a href='#' class='cart-button__delete-article' data-id='${article.id}'>X</a></td>
+                <td class="prop_art_1"><img src='${imagen}' width='100'</td>
+                <td class="prop_art_2">${titulo}</td>
+                <td class="prop_art_3">${precio}</td>
+                <td class="prop_art_4">${cantidad}</td>
+                <td class="buttons__cards">
+                    <a href='#' class='cart-button__delete-article' data-id='${article.id}'>X</a>
+                </td>
             `;
 
-            console.log(row);
+            if(Inicio.divTotal.hasChildNodes()) {
+                Inicio.divTotal.removeChild(Inicio.divTotal.lastChild)
+            }
+            Inicio.divTotal.appendChild(sumaTotal);
             //agregar el html
-            containerCart.appendChild(row);
+            Inicio.containerCart.appendChild(row);
+            
         })
 
     }
 
-    function cleanHTML(){
-        containerCart.innerHTML = ''; 
+    static cleanHTML(){
+        Inicio.containerCart.innerHTML = ''; 
     }
 
-        //////////////////       CARRUSEL       ///////////////////////////////
+    //////////////////       CARRUSEL       ///////////////////////////////
 
-    let imagesCarousel = document.querySelector('.carousel-articles__images')
-    let sliderPoint = document.querySelectorAll('.carousel-articles__slider-point')
+    static imagesCarousel = document.querySelector('.carousel-articles__images')
+    static sliderPoint = document.querySelectorAll('.carousel-articles__slider-point')
 
-    sliderPoint.forEach((punto, i) => {
-        sliderPoint[i].addEventListener('click', () => {                
-            let positions = i;
-            let operation = positions * -50;
-            console.log(operation)
+    static async carrusel (){
+        Inicio.sliderPoint.forEach((punto, i) => {
+            Inicio.sliderPoint[i].addEventListener('click', () => {                
+                let positions = i;
+                let operation = positions * -50;
+                console.log(operation)
 
-            imagesCarousel.style.transform = `translateX(${operation}%)`
+                Inicio.imagesCarousel.style.transform = `translateX(${operation}%)`
 
-            sliderPoint.forEach((punto, i) => {
-                sliderPoint[i].classList.remove('carousel-articles__slider-point--active')
-        })
+                Inicio.sliderPoint.forEach((punto, i) => {
+                    Inicio.sliderPoint[i].classList.remove('carousel-articles__slider-point--active')
+            })
 
-            sliderPoint[i].classList.add('carousel-articles__slider-point--active')
-        })    
-    });
-}, 1000);
+                Inicio.sliderPoint[i].classList.add('carousel-articles__slider-point--active')
+            })    
+        });
+    }
+
+
+    static async renderTemplateCards(products) {
+        const hbsFile = await fetch('templates/inicio.hbs').then(r => r.text());
+        const template = Handlebars.compile(hbsFile);
+        const html = template({ products });
+        document.querySelector('.cards-container').innerHTML += html;
+    }
+
+
+    static async init() {
+        Inicio.loadEventListeners();
+
+        const products =await productController.getProducts();
+        await Inicio.renderTemplateCards(products);
+        await Inicio.carrusel();
+    }
+};
+
+export default Inicio;
+

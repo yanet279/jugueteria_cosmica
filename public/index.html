@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico">
     <script src="https://kit.fontawesome.com/812ac387af.js" crossorigin="anonymous"></script>    
 
     <title>Inicio</title>
@@ -13,11 +14,12 @@
 
     <input type="checkbox" id="main-nav-toggle" class="main-nav-toggle">
     <div class="extra">
-        <p><oferta> !Ofertas imperdiblesnvió</oferta> &#47; Envió gratis en productos mayores a $5500.</p>
+        <p><oferta> !Ofertas imperdibles</oferta> &#47; Envió gratis en productos mayores a $5500.</p>
     </div>
     <header class="main-header">
         <div class="main-header__container-top">
             <div class="main-header__logo-container">
+                <!-- <img src="../public/img/iconos/LogoMakr-1LfAPu.png" alt=""> -->
             </div>
             <div class="main-header__search-form-container">
                 <input type="text" id="search" name="search" autocomplete="off" placeholder="Buscar productos ..." disabled>
@@ -45,6 +47,10 @@
                                 
                                 <tbody></tbody>
                             </table>
+                            <div class="cart-button-box">
+                                <div class="cart-button__info"><p>Total: $</p></div>
+                                <div class="cart-button__total"></div>
+                            </div>
                             <a href="#" class="cart-button__vaciar-carrito u-full-width">Vaciar Carrito</a>
                         </div>
                     </li>
@@ -63,16 +69,16 @@
             <nav class="main-nav">
                 <ul class="main-nav__list">
                     <li class="main-nav__item">
-                        <a class="main-nav__link" id="inicio" href="#inicio">Inicio</a>
+                        <a class="main-nav__link" href="#/inicio">Inicio</a>
                     </li>
                     <li class="main-nav__item">
-                        <a class="main-nav__link active" id="alta" aria-current="page" href="#alta">Alta</a>
+                        <a class="main-nav__link" href="#/alta">Alta</a>
                     </li>
                     <li class="main-nav__item">
-                        <a class="main-nav__link" id="contacto" href="#contacto">Contacto</a>
+                        <a class="main-nav__link" href="#/contacto">Contacto</a>
                     </li>
                     <li class="main-nav__item">
-                        <a class="main-nav__link" id="nosotros" href="#nosotros">Nosotros</a>
+                        <a class="main-nav__link" href="#/nosotros">Nosotros</a>
                     </li>
                     <span class="main-nav__indicator"></span>
                 </ul>
@@ -81,6 +87,7 @@
     </header>
 
     <main>
+        <img src="../img/fondo-de-pantalla/3b0d2ef413749292dffc628afd5c0c21.png" alt="">
 
     </main>
 
@@ -127,7 +134,7 @@
             <p class="main-footer__copyright">Copyright 2022 © Juguetería Cósmica. Todos los derechos Reservados.</p>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
+    <script src="js/vendor/handlebars.min-v4.7.7.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>

@@ -1,1 +1,8 @@
-console.log('HOLA A NOSOTROS')
+class Nosotros {
+
+    static async init () {
+        console.log('PageNostros.init()');
+    }
+}
+
+export default Nosotros;

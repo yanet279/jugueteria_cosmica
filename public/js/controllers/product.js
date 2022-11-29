@@ -1,5 +1,4 @@
 import productService from '/js/services/product.js';
-
 class ProductController {
 
     async getProduct(id) {

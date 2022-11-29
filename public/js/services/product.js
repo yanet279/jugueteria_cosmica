@@ -1,4 +1,4 @@
-import http from '/js/clients/http.client.js';
+import http from '/js/clients/http-client.js';
 
 class ProductService {
     
